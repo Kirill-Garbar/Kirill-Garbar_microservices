@@ -1,4 +1,5 @@
 # HW-12. Docker-1.
+## PR: https://github.com/Otus-DevOps-2018-09/Kirill-Garbar_microservices/pull/1
 ## В процессе сделано.
 - Установили докер
 - Запустили контейнер hello world!
@@ -14,6 +15,7 @@
 - На основе вывода команд объясните чем отличается контейнер от образа. Объяснение допишите в файл dockermonolith/docker-1.log
 
 # HW-13. Docker-2.
+## PR: https://github.com/Otus-DevOps-2018-09/Kirill-Garbar_microservices/pull/2
 ## В процессе сделано.
 - Создали новый проект в GCP.
 - Сконфигурировали gcloud на новый проект.
@@ -50,6 +52,7 @@
 - Перейти в браузере по ссылке http://app_external_ip:9292. Проверить так же с другими нодами.
 
 # HW-14. Docker-3.
+## PR: https://github.com/Otus-DevOps-2018-09/Kirill-Garbar_microservices/pull/3
 ## В процессе сделано.
 - Загрузили новые исходники нашего приложения, разделённые на модули.
 - Написали по докерфайлу для каждого сервиса.
@@ -96,6 +99,7 @@ docker run -d --network=reddit -p 9292:9292 -e "POST_SERVICE_HOST=post_newalias"
 - Пройти по docker-host_ip:9292, проверить работу.
 
 # HW-15. Docker-4.
+## PR: https://github.com/Otus-DevOps-2018-09/Kirill-Garbar_microservices/pull/4
 ## В процессе сделано.
 - Запускали контейнеры с разными встроенными драйверами: none, host, bridge.
 - Создали две сети front_net и back_net.
@@ -129,6 +133,7 @@ docker build -t $USER/source:latest ./source
 - Выполнить `docker-compose up -d`
 
 # HW-16. Gitlab-ci-1.
+## PR: https://github.com/Otus-DevOps-2018-09/Kirill-Garbar_microservices/pull/5
 ## В процессе сделано.
 - Создал образ пакер с докером.
 - Терраформом создал ВМ.
@@ -154,6 +159,7 @@ docker build -t $USER/source:latest ./source
 - Ссылка на канал в слаке: https://devops-team-otus.slack.com/messages/CDBTZKP18/details/.
 
 # HW-17. Gitlab-ci-2.
+## PR: https://github.com/Otus-DevOps-2018-09/Kirill-Garbar_microservices/pull/6
 ## В процессе сделано.
 - Описали окружения.
 - Сделали создание окружения staging по кнопке и наличию тэга с версией.
@@ -175,6 +181,7 @@ docker build -t $USER/source:latest ./source
 - Проверить выполнение джобов.
 
 # HW-18. Monitoring-1.
+## PR: https://github.com/Otus-DevOps-2018-09/Kirill-Garbar_microservices/pull/7
 ## В процессе сделано.
 - Запустили Prometheus в докере из официального образа.
 - Создали докерфайл, который из официального образа Prometheus с копированием нового конфига собирает кастомный образ.
@@ -205,6 +212,7 @@ docker build -t $USER/source:latest ./source
 - https://hub.docker.com/u/kirillgarbar
 
 # HW-19. Monitoring-2.
+## PR: https://github.com/Otus-DevOps-2018-09/Kirill-Garbar_microservices/pull/8
 ## В процессе сделано.
 - Создали докер-хост.
 - Разделили docker-compose на два файла. С контейнерами приложения и с контейнерами мониторинга.
@@ -314,6 +322,7 @@ stackdriver_monitoring_scrapes_total counter
 - Выключить один из микросервисов (ui,post,comment) и ждать восстановления.
 
 # HW-20. Logging-1.
+## PR: https://github.com/Otus-DevOps-2018-09/Kirill-Garbar_microservices/pull/9
 ## В процессе сделано
 - Новую версию приложения забрал и пересобрал в прошлых ДЗ. :)
 - Поменял в docker-build тэги на logging. Поменял в .env файле версии сервисов на logging.
@@ -339,6 +348,7 @@ stackdriver_monitoring_scrapes_total counter
 - Проверить zipkin и kibana.
 
 # HW-21. Kubernetes-1.
+## PR: https://github.com/Otus-DevOps-2018-09/Kirill-Garbar_microservices/pull/10
 ## В процессе сделано
 - Написали deployment для сервиса post.
 - Написали deployment для других сервисов.
@@ -356,6 +366,7 @@ stackdriver_monitoring_scrapes_total counter
 - Выполнить `ansible-playbook 02-install-client-tools.yml` и `ansible-playbook 03-create-compute-resources.yml`.
 
 # HW-22. Kubernetes-2.
+## PR: https://github.com/Otus-DevOps-2018-09/Kirill-Garbar_microservices/pull/11
 ## В процессе сделано
 - Установили kubectl.
 - Установил minikube на Linux. Потом на Windows. На Windows всплывали какие-то непонятные ошибки с загрузкой образов и я вернулся на Linux. Приложение проверял с помощью SSH-туннелирования.
@@ -383,6 +394,7 @@ stackdriver_monitoring_scrapes_total counter
 - Создать разрешающие правила для приложения (Не стал их добавлять в конфу кбер-кластера).
 
 # HW-23. Kubernetes-3.
+## PR: https://github.com/Otus-DevOps-2018-09/Kirill-Garbar_microservices/pull/12
 ## В процессе сделано
 - Проверили работу kube-dns. Отключили kube-dns-autoscaler. Отключили kube-dns. DNS перестал работать.
 - Сделали ui-service типа NodePort: открывается порт на всех нодах. Кубер сам решает, куда перенаправить запрос. Даже если пода нет на данной ноде, запрос всё равно дойдёт до пода.
@@ -409,6 +421,7 @@ stackdriver_monitoring_scrapes_total counter
 - Пройти по https://{ip}.
 
 # HW-24. Kubernetes-4.
+## PR: https://github.com/Otus-DevOps-2018-09/Kirill-Garbar_microservices/pull/14
 ## В процессе сделано.
 - Установили Helm. Контекст берётся из kubectl.
 - Установили Tiller - серверную часть Helm. Устанавливается как pod. Права выдали с помощью RBAC.
@@ -432,6 +445,7 @@ stackdriver_monitoring_scrapes_total counter
 - Свяжите пайплайны сборки образов и пайплайн деплоя на staging и production так, чтобы после релиза образа из ветки мастер - запускался деплой уже новой версии приложения на production.
 
 # HW-25. Kubernetes-5.
+## PR: https://github.com/Otus-DevOps-2018-09/Kirill-Garbar_microservices/pull/15
 ## В процессе сделано.
 - Добавил создание более мощного пула из предыдущего ДЗ -в terraform.
 - Установили ингресс контроллер nginx. Добавили в хосты имена из этого ДЗ на выданный IP nginx.
